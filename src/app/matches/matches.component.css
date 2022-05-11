@@ -1,0 +1,10 @@
+ul{
+    display: inline;
+}
+li{
+    display: inline;
+}
+.Button{
+    height: 20px;
+    width: 100%;
+}

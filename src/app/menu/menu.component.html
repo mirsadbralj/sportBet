@@ -1,0 +1,18 @@
+
+<ul *ngFor="let sport of Sports">
+    <li clas="flavours">
+        <a (click)="onSportClicked(sport)">{{sport.name}}</a>
+
+        <ul *ngIf="sport.id == SelectedSport?.id">
+            <li *ngFor="let country of sport.countries">
+                <a (click)="onCountryClicked(country)">{{country.name}}</a>
+
+                <ul *ngIf="country.name == SelectedCountry?.name">
+                    <li *ngFor="let league of country.leagues">
+                        <a (click)="onLeagueClicked(league)">{{league.name}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>

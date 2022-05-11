@@ -1,0 +1,19 @@
+.date{
+    background-color: #272A31;
+    height: 50px;
+}
+ul{
+    display: inline;
+}
+ul li{
+    display: inline;
+}
+
+
+.date ul li button{
+    background-color: grey;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+}

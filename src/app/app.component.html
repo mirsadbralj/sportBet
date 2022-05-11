@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 class="d-flex justify-content-center">Sport Bet App</h3>
+  <div class="date">
+    <h1>Date</h1>
+    <app-date></app-date>
+    <router-outlet name="date"></router-outlet>
+  </div>
+  <div class="main-class-div">
+    <div class="menu">
+      <h1>Menu</h1>
+      <app-menu></app-menu>
+      <router-outlet name="menu"></router-outlet>
+    </div>
+    <div class="matches">
+      <h1>Matches</h1>
+      <app-matches></app-matches>
+      <router-outlet name="matches"></router-outlet>
+    </div>
+    <div class="elaboration">
+      <h1>Elaboration</h1>
+      <app-elaboration></app-elaboration>
+      <router-outlet name="elaboration"></router-outlet>
+    </div>
+    <div class="ticket">
+      <h1>Ticket</h1>
+      <app-ticket></app-ticket>
+      <router-outlet name="ticket"></router-outlet>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

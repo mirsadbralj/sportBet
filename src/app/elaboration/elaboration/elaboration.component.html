@@ -1,0 +1,19 @@
+<div class="tables" >
+    <table>
+        <tbody>
+            <tr *ngFor="let market of loadMarkets()">
+                <span>
+                    {{market.name}}
+                </span>
+
+                <td *ngFor="let data of market.odds" class="odds">
+                    <button>
+                            <span class="left">{{data.field}}</span> 
+                            <span class="right">{{data.value}}</span>
+                    </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

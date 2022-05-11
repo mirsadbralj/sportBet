@@ -1,0 +1,29 @@
+<ul *ngIf="Filter">
+    <li *ngIf="Filter.sport && Filter.sport.value">{{ Filter.sport.value.name }}</li>
+    <li *ngIf="Filter.country && Filter.country.value">{{" > " + Filter.country.value.name}}</li>
+    <li *ngIf="Filter.league && Filter.league.value">{{" > " + Filter.league.value.name }}</li>
+</ul>
+
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>1</th>
+            <th>X</th>
+            <th>2</th>
+            <th>1X</th>
+            <th>X2</th>
+            <th>12</th>
+        </tr>
+        <tr *ngFor="let match of Matches">
+
+                <td (click)="OnMatchClicked(match)">{{match.competitors}}</td>
+                <td (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
+
+            <td *ngFor="let data of filterBasicBets(match)">
+                <button type="button" class="Button" *ngIf="data.value">{{data.value}}</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
