@@ -6,9 +6,7 @@
                     {{market.name}}
                 </span>
                 <td *ngFor="let data of market.odds" class="odds">
-                    <button 
-                    (click)="enableDisableRule()" 
-                    [ngClass]="{'green' : toggle, 'red': !toggle}">
+                    <button (click)="OnButtonClicked(data)">
                             <span class="left">{{data.field}}</span> 
                             <span class="right">{{data.value}}</span>
                     </button>

@@ -38,14 +38,13 @@ export class MatchesComponent implements OnInit {
     });
   }
   OnButtonClicked(odd: Odds) {
-    this.SelectedOdd = new Selected(this.SelectedMatch?.SelectedMatchId, odd);
-    console.log(this.SelectedOdd);
-    this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedMatch?.SelectedMatchId, this.SelectedOdd?.SelectedOdd))
+    this.SelectedOdd = new Selected(this.SelectedMatch?.SelectedMatch, odd);
+    this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedMatch?.SelectedMatch, this.SelectedOdd?.SelectedOdd))
   }
 
   OnMatchClicked(match: Match) {
-    this.SelectedMatch = new Selected(match.id, undefined);
-    this.MatchesFilterService.setSelectedMatch(new Selected(match.id, undefined))
+    this.SelectedMatch = new Selected(match, undefined);
+    this.MatchesFilterService.setSelectedMatch(new Selected(match, undefined))
   }
 
   filterBasicBets(match: Match) {

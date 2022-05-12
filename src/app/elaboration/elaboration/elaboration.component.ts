@@ -34,10 +34,14 @@ export class ElaborationComponent implements OnInit {
     this.MatchesFilterService.getSelectedMatch().subscribe((match) => {
       this.SelectedMatch = match;
       this.SelectedOdd = match;
-      console.log(this.SelectedOdd);
-      this.Match = this.Matches.find(x => x.id == this.SelectedMatch?.SelectedMatchId)
+      this.Match = this.Matches.find(x => x == this.SelectedMatch?.SelectedMatch)
       this.loadMarkets();
     });
+  }
+
+  OnButtonClicked(odd: Odds) {
+    this.SelectedOdd = new Selected(this.SelectedMatch?.SelectedMatch, odd);
+    this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedMatch?.SelectedMatch, this.SelectedOdd?.SelectedOdd))
   }
 
   loadMarkets() {
@@ -49,13 +53,11 @@ export class ElaborationComponent implements OnInit {
     return this.Markets;
   }
 
-  toggle = true;
-  status = 'Enable'; 
+  // toggle = true;
+  // status = 'Enable'; 
 
-  enableDisableRule() {
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-  }
-
-
+  // enableDisableRule() {
+  //   this.toggle = !this.toggle;
+  //   this.status = this.toggle ? 'Enable' : 'Disable';
+  // }
 }

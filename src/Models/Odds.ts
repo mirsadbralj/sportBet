@@ -4,9 +4,9 @@ export class Odds {
     field: string;
     marketId: number;
     order: number;
-    value?: string;
+    value: string;
 
-    constructor(alias: string, desciption: string, field: string, marketId: number, order: number, value?: string) {
+    constructor(alias: string, desciption: string, field: string, marketId: number, order: number, value: string) {
         this.alias = alias;
         this.description = desciption;
         this.field = field;
