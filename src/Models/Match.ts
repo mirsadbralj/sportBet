@@ -1,4 +1,4 @@
-import { Markets } from "./Markets";
+import { Market } from "./Market";
 
 export interface Match {
   id: number;
@@ -19,5 +19,5 @@ export interface Match {
   originalSportId: number;
   sportName: string;
   sportOrder: number;
-  markets:Array<Markets>;
+  markets:Array<Market>;
 }

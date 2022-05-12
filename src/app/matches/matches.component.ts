@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Markets } from 'src/Models/Markets';
+import { Market } from 'src/Models/Market';
 import { Match } from 'src/Models/Match';
 import { MatchFilter } from 'src/Models/MatchFilter';
 import { Odds } from 'src/Models/Odds';
@@ -18,7 +18,7 @@ export class MatchesComponent implements OnInit {
   SelectedMatch?: Selected;
   SelectedOdd?: Selected;
   Matches = new Array<Match>();
-  Markets = new Array<Markets>();
+  Markets = new Array<Market>();
   _Odds = new Array<Odds>();
   headers = new Array<string>();
   isSelected?: Boolean;

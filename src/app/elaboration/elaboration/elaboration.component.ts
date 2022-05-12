@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Markets } from 'src/Models/Markets';
+import { Market } from 'src/Models/Market';
 import { Match } from 'src/Models/Match';
 import { Odds } from 'src/Models/Odds';
 import { Selected } from 'src/Models/Selected';
@@ -13,12 +13,12 @@ import { MatchesFilterService } from 'src/Services/matches-filter.service';
 })
 
 export class ElaborationComponent implements OnInit {
-  Markets = new Array<Markets>();
+  Markets = new Array<Market>();
   Matches = new Array<Match>();
   Match?: Match;
   SelectedMatch?: Selected;
   SelectedOdd?: Selected;
-  MatchMarkets?: Array<Markets>;
+  MatchMarkets?: Array<Market>;
   constructor(
     private MatchesFilterService: MatchesFilterService,
     private DataStoreService: DataStoreService
@@ -45,7 +45,7 @@ export class ElaborationComponent implements OnInit {
   }
 
   loadMarkets() {
-    let markets = new Array<Markets>();
+    let markets = new Array<Market>();
     this.Match?.markets.forEach(element => {
       markets.push(element);
     });

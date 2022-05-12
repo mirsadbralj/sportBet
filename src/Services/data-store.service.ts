@@ -7,7 +7,7 @@ import { Match } from '../Models/Match';
 import { Orderable } from '../Models/Orderable';
 import { Sport } from '../Models/Sport';
 import { DateTime } from 'src/Models/Date';
-import { Markets } from 'src/Models/Markets';
+import { Market } from 'src/Models/Market';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class DataStoreService {
   private data = new Array<Match>();
   private sportsSubject = new Subject<Array<Sport>>();
   private DateSubject = new Subject<Array<DateTime>>();
-  private MarketSubject = new Subject<Array<Markets>>();
+  private MarketSubject = new Subject<Array<Market>>();
   private filteredDataSubject = new Subject<Array<Match>>();
 
   constructor() { }
@@ -40,11 +40,18 @@ export class DataStoreService {
   }
 
   update(data: Array<Match>) {
-
+    this.data.forEach(element => {
+      data.forEach(el=> {
+        if(element.id==el.id)
+        element=el;
+      });
+    });
   }
 
   delete(data: Array<Match>) {
-
+      data.forEach(el=> {
+        this.data = this.data.filter(x=> x.id != el.id);
+      });
   }
 
   filter(filter: MatchFilter) {
@@ -58,7 +65,7 @@ export class DataStoreService {
 
     if (filter.league == null)
       filter.league = this.lastFilter.league;
-      
+
     this.lastFilter = filter;
 
     let filtered = this.data;
@@ -93,7 +100,7 @@ export class DataStoreService {
     return this.DateSubject.asObservable();
   }
 
-  getMarkets(): Observable<Array<Markets>> {
+  getMarkets(): Observable<Array<Market>> {
     return this.MarketSubject.asObservable();
   }
 
@@ -110,7 +117,7 @@ export class DataStoreService {
   }
 
   private generateMarket() {
-    const markets = Array<Markets>();
+    const markets = Array<Market>();
 
     this.data.forEach(element => {
       element.markets.forEach(el => {

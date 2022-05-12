@@ -1,6 +1,6 @@
 import { Odds } from "./Odds";
 
-export class Markets {
+export class Market {
     code: string;
     competitors: string;
     description: string

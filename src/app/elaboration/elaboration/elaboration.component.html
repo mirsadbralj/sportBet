@@ -1,4 +1,4 @@
-<div class="tables" >
+<div class="tables">
     <table>
         <tbody>
             <tr *ngFor="let market of loadMarkets()">
@@ -9,8 +9,8 @@
                 </td>
                 <td *ngFor="let data of market.odds" class="odds">
                     <button (click)="OnButtonClicked(data)">
-                            <span class="left">{{data.field}}</span> 
-                            <span class="right">{{data.value}}</span>
+                        <span class="left">{{data.field}}</span>
+                        <span class="right">{{data.value}}</span>
                     </button>
                 </td>
             </tr>
