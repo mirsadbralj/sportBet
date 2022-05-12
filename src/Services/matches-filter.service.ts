@@ -2,29 +2,27 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Match } from 'src/Models/Match';
 import { MatchFilter } from 'src/Models/MatchFilter';
-import { SelectedMatch } from 'src/Models/SelectedItems';
+import { Selected } from 'src/Models/Selected';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MatchesFilterService {
-  private MatchSubject = new Subject<Match>();
-  private SelectedMatchSubject = new Subject<SelectedMatch>();
+  private SelectedMatchSubject = new Subject<Selected>();
   private filterSubject = new Subject<MatchFilter>();
 
   constructor() { }
-
-  setMatch(match: Match) {
-    this.MatchSubject.next(match);
-  }
-  getMatch(): Observable<Match> {
-    return this.MatchSubject.asObservable();
-  }
-
-  setSelectedMatch(match: SelectedMatch) {
+  setSelectedMatch(match: Selected) {
     this.SelectedMatchSubject.next(match);
   }
-  getSelectedMatch(): Observable<SelectedMatch> {
+  getSelectedMatch(): Observable<Selected> {
+    return this.SelectedMatchSubject.asObservable();
+  }
+
+  setSelectedOdd(match: Selected) {
+    this.SelectedMatchSubject.next(match);
+  }
+  getSelectedsetSelectedOddMatch(): Observable<Selected> {
     return this.SelectedMatchSubject.asObservable();
   }
 

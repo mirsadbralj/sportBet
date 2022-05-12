@@ -21,7 +21,7 @@
                     <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
                     <td class="date" (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
                 <td *ngFor="let data of filterBasicBets(match)">
-                    <button type="button" class="Button" *ngIf="data.value">{{data.value}}</button>
+                    <button type="button" class="Button" *ngIf="data.value" (click)="OnButtonClicked(data)">{{data.value}}</button>
                 </td>
             </tr>
         </tbody>

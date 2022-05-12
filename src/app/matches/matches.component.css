@@ -5,10 +5,14 @@ li{
     display: inline;
 }
 .Button{
-    height: 20px;
-    width: 40px;
+    height: 30px;
+    width: 45px;
+    border: none;
+    border-radius: 3px;
 }
-
+.Button:hover{
+    background-color: #808080;
+}
 table{
     table-layout: initial;
     width: 650px;

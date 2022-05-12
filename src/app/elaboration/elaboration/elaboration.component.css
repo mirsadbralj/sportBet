@@ -1,4 +1,4 @@
-.tables table tbody tr td.odds button{
+.tables table tbody tr td.odds button {
     border: 0;
     padding: 0;
     margin: 0;
@@ -10,29 +10,28 @@
     margin-right: 2px;
     margin-bottom: 2px;
     border-radius: 4px;
-    width: 80px;
-    height: 30px;
-    border:none;
-}
-
-.tables table tbody tr td.odds button span{
-    font-size: 13px;
-    display: inline;
+    width: 50px;
+    height: 50px;
+    border: none;
 }
 
 button {
-    background: linear-gradient(90deg, #BBBB, #BBBB 50%, #EFEFEF,#EFEFEF 50%);
+    background: linear-gradient(180deg, #BBBB, #BBBB 50%, #EFEFEF, #EFEFEF 50%);
 }
 
-.tables table tbody tr td.odds button span.left{
-    width: 50%;
+button:hover {
+    background-color: #808080;
+}
+
+.tables table tbody tr td.odds button span.left {
+    width: 100%;
     display: inline-block;
     overflow: hidden;
     align-items: center;
 }
 
-.tables table tbody tr td.odds button.wrap span.right{
-    width: 50%;
+.tables table tbody tr td.odds button.wrap span.right {
+    width: 100%;
     display: inline-block;
     overflow: hidden;
     align-items: center;
