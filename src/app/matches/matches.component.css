@@ -1,38 +1,56 @@
-ul{
+.table-div {
+    background-color: white;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+ul {
     display: inline;
 }
-li{
+
+li {
     display: inline;
+
 }
-.Button{
+
+.Button {
     height: 20px;
     width: 35px;
     border: none;
     border-radius: 3px;
 }
-.Button:hover{
+
+.Button:hover {
     background-color: #808080;
+    cursor: pointer;
 }
-table{
+
+table {
     table-layout: initial;
     width: 600px;
     border-spacing: 0;
 }
 
-th.odd{
+th.odd {
     width: 40px;
 }
 
-td.match{
-    width:300px;
+td.match {
+    width: 300px;
     padding-left: 10px;
 }
 
-td.date{
+td.date {
     width: 110px;
 }
 
-tr.match-odds-row:hover{
-background-color: #DDDD;
+tr.match-odds-row:hover {
+    background-color: #DDDD;
 }
-

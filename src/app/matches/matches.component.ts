@@ -31,14 +31,12 @@ export class MatchesComponent implements OnInit {
     this.DataStoreService.getFiltered().subscribe((matches) => {
       this.Matches = matches;
     });
-
     this.MatchesFilterService.getFilter().subscribe((filter) => {
       this.Filter = filter;
       this.DataStoreService.filter(filter);
     });
   }
-  OnButtonClicked(odd: Odds, match:Match) {
-
+  OnButtonClicked(odd: Odds, match: Match) {
     this.SelectedOdd = new Selected(match, odd);
     this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedOdd?.SelectedMatch, this.SelectedOdd?.SelectedOdd))
   }
@@ -51,11 +49,9 @@ export class MatchesComponent implements OnInit {
   filterBasicBets(match: Match) {
     let odds = new Array<Odds>();
     let ordered = new Array<Odds>();
-
     match.markets[0].odds.forEach(element => {
       odds.push(element);
     });
-
     for (let index = 0; index < odds.length; index++) {
       if (odds[index].field == '1') {
         ordered[0] = odds[index];
@@ -97,5 +93,4 @@ export class MatchesComponent implements OnInit {
     this._Odds = ordered;
     return this._Odds;
   }
-
 }

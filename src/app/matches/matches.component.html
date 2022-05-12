@@ -1,30 +1,33 @@
-<ul *ngIf="Filter">
-    <li *ngIf="Filter.sport && Filter.sport.value">{{ Filter.sport.value.name }}</li>
-    <li *ngIf="Filter.country && Filter.country.value">{{" > " + Filter.country.value.name}}</li>
-    <li *ngIf="Filter.league && Filter.league.value">{{" > " + Filter.league.value.name }}</li>
-</ul>
-
-<div class="table-class">
-    <table class="table table-striped">
-        <tbody>
-            <tr>
-                <th></th>
-                <th></th>
-                <th class="odd">1</th>
-                <th class="odd">X</th>
-                <th class="odd">2</th>
-                <th class="odd">1X</th>
-                <th class="odd">X2</th>
-                <th class="odd">12</th>
-            </tr>
-            <tr class="match-odds-row" *ngFor="let match of Matches">
-                <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
-                <td class="date" (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
-                <td *ngFor="let data of filterBasicBets(match)">
-                    <button type="button" class="Button" *ngIf="data.value"
-                        (click)="OnButtonClicked(data,match)">{{data.value}}</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="top-div">
+    <div class="top">
+        <ul *ngIf="Filter">
+            <li *ngIf="Filter.sport && Filter.sport.value">{{ Filter.sport.value.name }}</li>
+            <li *ngIf="Filter.country && Filter.country.value">{{" > " + Filter.country.value.name}}</li>
+            <li *ngIf="Filter.league && Filter.league.value">{{" > " + Filter.league.value.name }}</li>
+        </ul>
+    </div>
+    <div class="table-div">
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th class="odd">1</th>
+                    <th class="odd">X</th>
+                    <th class="odd">2</th>
+                    <th class="odd">1X</th>
+                    <th class="odd">X2</th>
+                    <th class="odd">12</th>
+                </tr>
+                <tr class="match-odds-row" *ngFor="let match of Matches">
+                    <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
+                    <td class="date" (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
+                    <td *ngFor="let data of filterBasicBets(match)">
+                        <button type="button" class="Button" *ngIf="data.value"
+                            (click)="OnButtonClicked(data,match)">{{data.value}}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

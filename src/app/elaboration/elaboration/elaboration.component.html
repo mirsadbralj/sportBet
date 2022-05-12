@@ -1,19 +1,33 @@
+<div class="top-div">
+    <ul>
+        <li *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.sportName}}</li>
+        <li *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.countryName}}</li>
+        <li *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.leagueName}}</li>
+    </ul>
+    <div class="second-div">
+        <p *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.competitors}}</p>
+        <p *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.matchDate}}</p>
+    </div>
+</div>
 <div class="tables">
-    <table>
-        <tbody>
-            <tr *ngFor="let market of loadMarkets()">
-                <td>
-                    <span>
-                        {{market.name}}
-                    </span>
-                </td>
-                <td *ngFor="let data of market.odds" class="odds">
-                    <button (click)="OnButtonClicked(data)">
-                        <span class="left">{{data.field}}</span>
-                        <span class="right">{{data.value}}</span>
-                    </button>
-                </td>
-            </tr>
-        </tbody>
+    <table *ngFor="let market of loadMarkets()">
+        <li class="market-name">
+            {{market.name}}
+        <li>
+            <tbody>
+                <tr>
+                    <td>
+                        <span>
+                            {{market.competitors}}
+                        </span>
+                    </td>
+                    <td *ngFor="let data of market.odds" class="odds">
+                        <button (click)="OnButtonClicked(data)">
+                            <span class="left">{{data.field}}</span>
+                            <span class="right">{{data.value}}</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
     </table>
 </div>

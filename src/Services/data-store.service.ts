@@ -41,22 +41,20 @@ export class DataStoreService {
 
   update(data: Array<Match>) {
     this.data.forEach(element => {
-      data.forEach(el=> {
-        if(element.id==el.id)
-        element=el;
+      data.forEach(el => {
+        if (element.id == el.id)
+          element = el;
       });
     });
   }
 
   delete(data: Array<Match>) {
-      data.forEach(el=> {
-        this.data = this.data.filter(x=> x.id != el.id);
-      });
+    data.forEach(el => {
+      this.data = this.data.filter(x => x.id != el.id);
+    });
   }
 
   filter(filter: MatchFilter) {
-
-
     if (filter.country == null)
       filter.country = this.lastFilter.country;
 
@@ -118,13 +116,11 @@ export class DataStoreService {
 
   private generateMarket() {
     const markets = Array<Market>();
-
     this.data.forEach(element => {
       element.markets.forEach(el => {
         markets.push(el);
       });
     });
-
     return markets;
   }
 
@@ -136,20 +132,17 @@ export class DataStoreService {
       var date1 = dates.find(d => d.day == date2.day
         && d.month == date2.month
         && d.year == date2.year);
-
       if (!date1) {
         date1 = new DateTime(date2.year, date2.month, date2.day);
         date1.date = new Date(Day);
         dates.push(date1);
       }
     })
-
     dates.sort(function (a, b) {
       var dateA = new Date(a.date!).getTime();
       var dateB = new Date(b.date!).getTime();
       return dateA > dateB ? 1 : -1;
     });
-
     return dates;
   }
 
@@ -163,14 +156,12 @@ export class DataStoreService {
         sports.push(sport);
         this.sort(sports);
       }
-
       var country = sport.countries.find(c => c.name == match.countryName);
       if (!country) {
         country = new Country(match.countryName, match.countryOrder, []);
         sport.countries.push(country);
         this.sort(sport.countries);
       }
-
       var league = country.leagues.find(l => l.id == match.leagueId);
       if (!league) {
         league = new League(match.leagueId, match.leagueName, match.leagueOrder);
@@ -178,7 +169,6 @@ export class DataStoreService {
         this.sort(country.leagues);
       }
     });
-
     return sports;
   }
 }

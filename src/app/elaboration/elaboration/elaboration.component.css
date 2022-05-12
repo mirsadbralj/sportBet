@@ -1,3 +1,18 @@
+.top-div {
+    background-color: #398534;
+    color: white;
+    margin-right: 5px;
+}
+
+.second-div {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.market-name-div {
+    background-color: yellow;
+}
+
 .tables table tbody tr td.odds button {
     border: 0;
     padding: 0;
@@ -9,12 +24,19 @@
     height: 40px;
     border: none;
 }
-.tables{
-   width: 450px; 
-   margin-top: 30px;
+
+.tables {
+    width: 450px;
 }
-table{
-    table-layout:auto;
+
+.tables table .market-name {
+    width: 100%;
+    background-color: #DDDD;
+    border-collapse: collapse;
+}
+
+table {
+    table-layout: auto;
     width: 450px;
     border-spacing: 0;
 }
@@ -39,4 +61,14 @@ button:hover {
     display: inline-block;
     overflow: hidden;
     align-items: center;
+}
+
+ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 10px;
+}
+
+li {
+    list-style: none;
 }
