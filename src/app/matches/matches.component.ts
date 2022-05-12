@@ -37,9 +37,10 @@ export class MatchesComponent implements OnInit {
       this.DataStoreService.filter(filter);
     });
   }
-  OnButtonClicked(odd: Odds) {
-    this.SelectedOdd = new Selected(this.SelectedMatch?.SelectedMatch, odd);
-    this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedMatch?.SelectedMatch, this.SelectedOdd?.SelectedOdd))
+  OnButtonClicked(odd: Odds, match:Match) {
+
+    this.SelectedOdd = new Selected(match, odd);
+    this.MatchesFilterService.setSelectedOdd(new Selected(this.SelectedOdd?.SelectedMatch, this.SelectedOdd?.SelectedOdd))
   }
 
   OnMatchClicked(match: Match) {

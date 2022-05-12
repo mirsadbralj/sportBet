@@ -1,14 +1,24 @@
 <div class="ticket-div">
-    <table>
-        <tbody>
-            <tr>
-                <td class="Competitors" *ngIf="this.Odd.value">{{this.Match.competitors}}</td>
-                <td><button></button></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>{{this.Odd.value}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <body>
+        <table>
+            <tbody *ngFor="let data of MatchOdds">
+                <tr>
+                    <td>{{data.competitors}}</td>
+                    <td></td>
+                    <td><button class="button-remove-item" (click)="RemoveOdd(data)">X</button></td>
+                </tr>
+                <tr>
+                    <td>{{data.sportName}}</td>
+                    <td>{{data.countryName}}</td>
+                    <td>{{data.Oddfield}}</td>
+                </tr>
+                <tr>
+                    <td>{{data.matchDate}}</td>
+                    <td></td>
+                    <td>{{data.Oddvalue}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="print-ticket">Ispiši tiket</button>
+    </body>
 </div>

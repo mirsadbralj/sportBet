@@ -52,12 +52,4 @@ export class ElaborationComponent implements OnInit {
     this.Markets = markets;
     return this.Markets;
   }
-
-  // toggle = true;
-  // status = 'Enable'; 
-
-  // enableDisableRule() {
-  //   this.toggle = !this.toggle;
-  //   this.status = this.toggle ? 'Enable' : 'Disable';
-  // }
 }

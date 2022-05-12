@@ -17,11 +17,12 @@
                 <th class="odd">X2</th>
                 <th class="odd">12</th>
             </tr>
-            <tr class="match-odds-row" *ngFor="let match of Matches" >
-                    <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
-                    <td class="date" (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
+            <tr class="match-odds-row" *ngFor="let match of Matches">
+                <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
+                <td class="date" (click)="OnMatchClicked(match)">{{match.matchDate | date:'EEEE, dd.MM.'}}</td>
                 <td *ngFor="let data of filterBasicBets(match)">
-                    <button type="button" class="Button" *ngIf="data.value" (click)="OnButtonClicked(data)">{{data.value}}</button>
+                    <button type="button" class="Button" *ngIf="data.value"
+                        (click)="OnButtonClicked(data,match)">{{data.value}}</button>
                 </td>
             </tr>
         </tbody>

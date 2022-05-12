@@ -2,9 +2,11 @@
     <table>
         <tbody>
             <tr *ngFor="let market of loadMarkets()">
-                <span>
-                    {{market.name}}
-                </span>
+                <td>
+                    <span>
+                        {{market.name}}
+                    </span>
+                </td>
                 <td *ngFor="let data of market.odds" class="odds">
                     <button (click)="OnButtonClicked(data)">
                             <span class="left">{{data.field}}</span> 
