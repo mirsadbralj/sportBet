@@ -20,6 +20,7 @@ export class MatchesComponent implements OnInit {
   Markets = new Array<Markets>();
   _Odds = new Array<Odds>();
   headers = new Array<string>();
+  isSelected?:Boolean;
   constructor(
     private MatchesFilterService: MatchesFilterService,
     private DataStoreService: DataStoreService
@@ -102,4 +103,5 @@ export class MatchesComponent implements OnInit {
 
     return this._Odds;
   }
+
 }

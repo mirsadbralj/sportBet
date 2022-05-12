@@ -1,6 +1,6 @@
 
 <ul *ngFor="let sport of Sports">
-    <li clas="flavours">
+    <li>
         <a (click)="onSportClicked(sport)">{{sport.name}}</a>
 
         <ul *ngIf="sport.id == SelectedSport?.id">

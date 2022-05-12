@@ -6,5 +6,30 @@ li{
 }
 .Button{
     height: 20px;
-    width: 100%;
+    width: 40px;
 }
+
+table{
+    table-layout: initial;
+    width: 650px;
+    border-spacing: 0;
+    /* border-collapse: ; */
+}
+
+th.odd{
+    width: 40px;
+}
+
+td.match{
+    width:300px;
+    padding-left: 10px;
+}
+
+td.date{
+    width: 110px;
+}
+
+tr.match-odds-row:hover{
+background-color: #DDDD;
+}
+
