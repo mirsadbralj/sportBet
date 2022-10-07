@@ -7,7 +7,7 @@ import { MatchOdd } from 'src/Models/MatchOdd';
 @Component({
   selector: 'app-ticket',
   templateUrl: './ticket.component.html',
-  styleUrls: ['./ticket.component.css']
+  styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
   SelectedMatch?: Selected;

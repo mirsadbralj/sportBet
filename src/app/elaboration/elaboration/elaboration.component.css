@@ -1,7 +1,9 @@
 .top-div {
     background-color: #398534;
     color: white;
-    margin-right: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .second-div {
@@ -63,7 +65,7 @@ button:hover {
     align-items: center;
 }
 
-ul li {
+div a {
     display: inline;
     list-style: none;
     margin-left: 10px;

@@ -1,9 +1,9 @@
-<div class="top-div">
-    <ul>
-        <li *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.sportName}}</li>
-        <li *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.countryName}}</li>
-        <li *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.leagueName}}</li>
-    </ul>
+<div class="top-div" *ngIf="SelectedMatch!=undefined">
+    <div>
+        <a *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.sportName}}</a>
+        <a *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.countryName}}</a>
+        <a *ngIf="SelectedMatch!=undefined">{{" > " + SelectedMatch.SelectedMatch?.leagueName}}</a>
+    </div>
     <div class="second-div">
         <p *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.competitors}}</p>
         <p *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.matchDate}}</p>

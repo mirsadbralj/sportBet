@@ -1,11 +1,29 @@
 <div class="ticket-div">
+    <!-- <div class="ticket-template" *ngFor="let data of MatchOdds">
+        <div class="template">
+            <a>{{data.competitors}}</a>
+            <a>{{data.competitors}}</a>
+            <a><button class="button-remove-item" (click)="RemoveOdd(data)">x</button></a>
+        </div>
+        <div class="template">
+            <a>{{data.sportName}}</a>
+            <a>{{data.countryName}}</a>
+            <a>{{data.Oddfield}}</a>
+        </div>
+        <div class="template">
+            <a>{{data.matchDate}}</a>
+            <a></a>
+            <a>{{data.Oddvalue}}</a>
+        </div>
+    </div> -->
+    <!-- <button class="print-ticket">Ispiši tiket</button> -->
     <body>
         <table>
             <tbody *ngFor="let data of MatchOdds">
                 <tr>
                     <td>{{data.competitors}}</td>
                     <td></td>
-                    <td><button class="button-remove-item" (click)="RemoveOdd(data)">X</button></td>
+                    <td><button class="button-remove-item" (click)="RemoveOdd(data)">x</button></td>
                 </tr>
                 <tr>
                     <td>{{data.sportName}}</td>

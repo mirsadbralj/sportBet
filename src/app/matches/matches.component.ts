@@ -10,7 +10,7 @@ import { MatchesFilterService } from 'src/Services/matches-filter.service';
 @Component({
   selector: 'app-matches',
   templateUrl: './matches.component.html',
-  styleUrls: ['./matches.component.css']
+  styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent implements OnInit {
   Filter?: MatchFilter;

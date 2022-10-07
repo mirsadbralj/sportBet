@@ -5,22 +5,24 @@
       <app-date></app-date>
       <router-outlet name="date"></router-outlet>
     </div>
-    <div class="main-class-div">
+    <div class="main-class">
       <div class="menu">
         <app-menu></app-menu>
         <router-outlet name="menu"></router-outlet>
       </div>
-      <div class="matches">
-        <app-matches></app-matches>
-        <router-outlet name="matches"></router-outlet>
-      </div>
-      <div class="elaboration">
-        <app-elaboration></app-elaboration>
-        <router-outlet name="elaboration"></router-outlet>
-      </div>
-      <div class="ticket">
-        <app-ticket></app-ticket>
-        <router-outlet name="ticket"></router-outlet>
+      <div class="container-ticket-play">
+        <div class="matches">
+          <app-matches></app-matches>
+          <router-outlet name="matches"></router-outlet>
+        </div>
+        <div class="elaboration">
+          <app-elaboration></app-elaboration>
+          <router-outlet name="elaboration"></router-outlet>
+        </div>
+        <div class="ticket">
+          <app-ticket></app-ticket>
+          <router-outlet name="ticket"></router-outlet>
+        </div>
       </div>
     </div>
   </body>

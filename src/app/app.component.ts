@@ -6,7 +6,7 @@ import { WebSocketService } from 'src/Services/web-socket.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'SportBet';

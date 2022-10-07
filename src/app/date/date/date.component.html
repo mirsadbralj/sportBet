@@ -1,7 +1,9 @@
-<div class="date">
-    <ul *ngFor="let dataitem of Dates">
-        <li>
-            <button type="button" (click)="OnDateButtonClicked(dataitem)">{{dataitem.date | date:'EEEE,dd.MM.'}}</button>
-        </li>
-    </ul>
+<div class="main-class">
+    <div class="date">
+        <ul *ngFor="let dataitem of Dates">
+            <li>
+                <button type="button" (click)="OnDateButtonClicked(dataitem)">{{dataitem.date | date:'EEEE,dd.MM.'}}</button>
+            </li>
+        </ul>
+    </div>    
 </div>

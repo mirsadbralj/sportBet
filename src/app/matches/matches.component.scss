@@ -1,10 +1,20 @@
-.table-div {
-    background-color: white;
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 15px;
-    margin-bottom: 2px;
-    color: black;
+.container{
+    width: auto;
+    & .table-div {
+        background-color: white;
+        margin-right: 2px;
+        margin-left: 2px;
+        margin-top: 15px;
+        margin-bottom: 2px;
+        color: black;
+    }
+    & .top-div {
+        background-color: #398534;
+        color: white;
+        padding: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
 }
 
 td:hover {

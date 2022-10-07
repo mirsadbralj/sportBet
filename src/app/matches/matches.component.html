@@ -1,5 +1,5 @@
-<div class="top-div">
-    <div class="top">
+<div class="container">
+    <div class="top-div" *ngIf="Filter">
         <ul *ngIf="Filter">
             <li *ngIf="Filter.sport && Filter.sport.value">{{ Filter.sport.value.name }}</li>
             <li *ngIf="Filter.country && Filter.country.value">{{" > " + Filter.country.value.name}}</li>
