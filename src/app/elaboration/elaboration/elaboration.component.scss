@@ -1,0 +1,58 @@
+.top-div {
+    background-color: #398534;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+}
+
+.market-name-div {
+    background-color: yellow;
+}
+
+.tables {
+    & table {
+        table-layout: auto;
+        width: 100%;
+        border-spacing: 0;
+        & .odds{
+            & .odd-button{
+                position: inherit;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+                column-gap: 5px;
+                align-items: center;
+                text-align: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+                display: grid;
+                cursor: pointer;
+                border-radius: 4px;
+                border: none;
+                height: 20px;
+                background: linear-gradient(90deg, #BBBB, #BBBB 50%, #EFEFEF, #EFEFEF 50%);
+            }
+
+            & .odd-button:hover{
+                background: linear-gradient(90deg, #8D8D8D,#8D8D8D 50%, #8D8D8D, #8D8D8D 50%);
+            }
+        }
+    }
+}
+
+.tables table .market-name {
+    width: 100%;
+    background-color: #DDDD;
+    border-collapse: collapse;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+

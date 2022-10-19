@@ -9,7 +9,7 @@ import { MatchesFilterService } from 'src/Services/matches-filter.service';
 @Component({
   selector: 'app-elaboration',
   templateUrl: './elaboration.component.html',
-  styleUrls: ['./elaboration.component.css']
+  styleUrls: ['./elaboration.component.scss']
 })
 
 export class ElaborationComponent implements OnInit {
