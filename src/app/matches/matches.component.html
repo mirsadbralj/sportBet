@@ -12,12 +12,12 @@
                 <tr>
                     <th></th>
                     <th></th>
-                    <th class="odd">1</th>
-                    <th class="odd">X</th>
-                    <th class="odd">2</th>
-                    <th class="odd">1X</th>
-                    <th class="odd">X2</th>
-                    <th class="odd">12</th>
+                    <th *ngIf="Matches" class="odd">1</th>
+                    <th *ngIf="Matches" class="odd">X</th>
+                    <th *ngIf="Matches" class="odd">2</th>
+                    <th *ngIf="Matches" class="odd">1X</th>
+                    <th *ngIf="Matches" class="odd">X2</th>
+                    <th *ngIf="Matches" class="odd">12</th>
                 </tr>
                 <tr class="match-odds-row" *ngFor="let match of Matches">
                     <td class="match" (click)="OnMatchClicked(match)">{{match.competitors}}</td>
