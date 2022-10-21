@@ -1,66 +1,67 @@
-.container{
-    width: auto;
+.container {
+    width: 700px;
+    height: auto;
+    border: 2px solid #398534;
+    border-radius: 6px;
     & .table-div {
         background-color: white;
-        margin-right: 2px;
-        margin-left: 2px;
         margin-top: 15px;
         margin-bottom: 2px;
         color: black;
     }
+
     & .top-div {
         background-color: #398534;
         color: white;
         padding: 5px;
         margin-bottom: 5px;
-        border-radius: 5px;
+        // border-radius: 5px;
     }
-}
 
-td:hover {
-    cursor: pointer;
-}
+    & ul {
+        display: inline;
 
-ul {
-    display: inline;
-}
+        & li {
+            display: inline;
+        }
+    }
 
-li {
-    display: inline;
+    table {
+        table-layout: initial;
+        width: auto;
+        border-spacing: 0;
 
-}
+        & th.odd {
+            width: 40px;
+        }
 
-.Button {
-    height: 20px;
-    width: 35px;
-    border: none;
-    border-radius: 3px;
-}
+        & td.match {
+            width: 300px;
+            padding-left: 10px;
+        }
 
-.Button:hover {
-    background-color: #808080;
-    cursor: pointer;
-}
+        & td.date {
+            width: 110px;
+        }
 
-table {
-    table-layout: initial;
-    width: 600px;
-    border-spacing: 0;
-}
+        & tr.match-odds-row:hover {
+            background-color: #DDDD;
+        }
 
-th.odd {
-    width: 40px;
-}
+        & td:hover {
+            cursor: pointer;
+        }
 
-td.match {
-    width: 300px;
-    padding-left: 10px;
-}
+        .Button {
+            height: 20px;
+            width: 35px;
+            border: none;
+            border-radius: 3px;
+        }
 
-td.date {
-    width: 110px;
-}
-
-tr.match-odds-row:hover {
-    background-color: #DDDD;
+        .Button:hover {
+            background-color: #808080;
+            cursor: pointer;
+        }
+    }
 }
