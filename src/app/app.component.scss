@@ -1,11 +1,13 @@
-.container{
-  & body{
+.container {
+  & body {
     font-size: 13px;
     font-family: 'Times New Roman', Times, serif;
-    & .main-class{
+
+    & .main-class {
       display: flex;
       width: auto;
-      & .container-ticket-play{
+
+      & .container-ticket-play {
         display: grid;
         margin-top: 10px;
         margin-left: 10px;
@@ -13,16 +15,25 @@
         grid-template-columns: 0.6fr 0.6fr 0.4fr;
         grid-template-rows: 1fr;
         grid-column-gap: 5px;
-        grid-row-gap: 0px;   
+        grid-row-gap: 0px;
       }
-      & .matches { grid-area: 1 / 1 / 2 / 2; }
-      & .elaboration { grid-area: 1 / 2 / 2 / 3; }
-      & .ticket { grid-area: 1 / 3 / 2 / 4; }
+
+      & .matches {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      & .elaboration {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      & .ticket {
+        grid-area: 1 / 3 / 2 / 4;
+      }
     }
   }
 }
-.menu{
-  background-color: #272B31;
-  color:white;
+
+.menu {
+  color: white;
   height: auto;
 }

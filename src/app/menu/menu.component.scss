@@ -1,38 +1,49 @@
-ul{
+ul {
     list-style: none;
     padding-left: 0px;
     margin: 0;
-}
-li{
-    width: 180px;
-    line-height: 30px;
-}
-ul li a{
-    padding-left: 10px;
-    width: 100%;
-    height: 30px;
-}
-ul li{
-    background-color: #272B31;
-}
-ul li:hover {
     cursor: pointer;
-    background-color: #808080;
-}
-ul li>ul li{
-    background-color: #808080;
-    color:black;
-}
-ul li>ul li:hover{
-    background-color: #272B31;
 }
 
-ul li>ul li>ul li{
-    background-color: #BBBBBB;
-    color: black;
-}
-ul li>ul li>ul li:hover{
-    background-color: #272B31;
-}
+.sports {
+    & a {
+        padding-left: 10px;
+        width: 100%;
+        height: 30px;
+    }
 
+    & .sport {
+        width: 180px;
+        line-height: 30px;
+        margin-bottom: 5px;
+        background-color: #272B31;
+    }
 
+    & .countries {
+        background-color: white;
+        border-bottom: 1px solid #272B31;
+        color: #272B31;
+    }
+
+    & .leagues {
+        background-color: white;
+        color: #272B31;
+        border-bottom: 1px solid #272B31;
+
+        & .league-name {
+            margin-left: 10px;
+        }
+    }
+
+    & .sport:hover {
+        background-color: grey;
+    }
+
+    & .countries:hover {
+        background-color: #DDDD;
+    }
+
+    & .leagues:hover {
+        background-color: #DDDD;
+    }
+}

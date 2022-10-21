@@ -20,7 +20,10 @@
         & table {
             table-layout: auto;
             width: 100%;
+            max-width: 580px;
             border-spacing: 0;
+            text-indent: initial;
+            box-sizing: border-box;
             & .odds{
                 & .odd-button{
                     position: inherit;
