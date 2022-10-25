@@ -1,19 +1,39 @@
 <div class="ticket-div">
-        <div *ngFor="let data of MatchOdds">
-                <div class="a-competitors">
-                    <a>{{data.competitors}}</a>
-                    <a class="last-column"><button class="button-remove-item" (click)="RemoveOdd(data)">x</button></a>
-                </div>
-                <div class="grid-row">
-                    <a>{{data.sportName}}  -  {{data.countryName}}</a>
-                    <a class="last-column">{{data.Oddfield}}</a>
-                </div>
-                <div class="grid-row">
-                    <a>{{data.matchDate}}</a>
-                    <a class="last-column">{{data.Oddvalue}}</a>
-                </div>
+    <div class="ticket">
+        <div class="remove">
+            <button class="remove-ticket" (click)="removeTicket()">OBRIŠI TIKET</button>
         </div>
-        <div class="button-print">
+        <div class="match-pairs" *ngFor="let data of MatchOdds">
+            <div class="a-competitors">
+                <a>{{data.competitors}}</a>
+                <a class="last-column"><button class="button-remove-item" (click)="removeOdd(data)">x</button></a>
+            </div>
+            <div class="grid-row">
+                <a>{{data.sportName}}  -  {{data.countryName}}</a>
+                <a class="last-column">{{data.Oddfield}}</a>
+            </div>
+            <div class="grid-row">
+                <a>{{data.matchDate}}</a>
+                <a class="last-column">{{data.Oddvalue}}</a>
+            </div>
+        </div>
+        <div class="ticket-info">
+            <div class="template">
+                <a>Broj parova</a>
+                <a>{{oddsNumber}}</a>
+            </div>
+            <div class="template">
+                <a>Koeficijent</a>
+                <a>{{totalCoeficientToPresent}}</a>
+            </div>
+            <div class="template">
+                <a>Moguća isplata</a>
+                <a>{{possiblePaimentTopresent}}</a>
+            </div>
+        </div>
+        <div class="stake-print">
+            <input type="number" value="1" (change)="onChange($event)">
             <button class="print-ticket" >Ispiši tiket</button>
         </div>
+    </div>
 </div>

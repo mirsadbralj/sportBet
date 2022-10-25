@@ -1,0 +1,33 @@
+.main-class {
+    & .date {
+        background-color: #272A31;
+        height: 35px;
+    }
+
+    & ul {
+        display: inline;
+    }
+
+    & ul li {
+        display: inline;
+    }
+
+    & .date ul li button {
+        background-color: #41474F;
+        color: white;
+        height: 25px;
+        width: 120px;
+        border-radius: 4px;
+        border: none;
+        margin-top: 5px;
+    }
+
+    & .date ul li button:hover {
+        transition: 0.5s;
+        background-color: #1B1E22;
+    }
+
+    & bottom:active{
+        background-color: #1B1E22;
+    }
+}

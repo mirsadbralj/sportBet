@@ -6,10 +6,12 @@
     & .main-class {
       display: flex;
       width: auto;
-
+      & .menu {
+        margin-top: 5px;
+      }
       & .container-ticket-play {
         display: grid;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-left: 10px;
         width: 100%;
         grid-template-columns: 0.6fr 0.6fr 0.4fr;

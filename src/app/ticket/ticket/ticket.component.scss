@@ -1,55 +1,115 @@
 .ticket-div {
-    background-color: #CDCDCD;
+    background-color: #41474F;
     width: auto;
     height: auto;
-    border: 2px solid #398534;
     border-radius: 6px;
 
-    & .a-competitors {
-        color: white;
-        background-color: #41474F;
-        display: grid;
-        grid-template-columns: 1fr 0.05fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-    }
+    & .ticket {
+        padding: 3px;
+        margin-bottom: 3px;
+        & .remove{
+            display: block;
 
-    & .grid-row {
-        background-color: white;
-        display: grid;
-        grid-template-columns: 1fr 0.05fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-    }
-
-    & .button-remove-item {
-        height: auto;
-        width: auto;
-        font-size: px;
-        font-weight: 700;
-        background-color: red;
-        color: white;
-        text-align: center;
-        font-size: 13px;
-    }
-
-    & .button-print {
-        width: 100%;
-        height: 100%;
-        margin-top: 5px;
-        display: inline-block;
-
-        & .print-ticket {
-            float: right;
-            height: 40px;
-            width: 150px;
-            border: none;
-            border-radius: 6px;
-            background-color: #398534;
+            & .remove-ticket{
+                width: 100%;
+                background-color: #B60404;
+                border: none;
+                color: white;
+                text-transform: uppercase;
+                padding: 6px 0;
+                margin-bottom: 3px;
+            }
+        }
+        
+        & .match-pairs {
+            width: 100%;
+        }
+    
+        & .a-competitors {
             color: white;
+            background-color: #272A31;
+            display: grid;
+            grid-template-columns: 1fr 0.05fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            align-items: center;
+            padding-left: 10px;
+            padding: 6px 3px 6px 10px;
             font-size: 14px;
         }
+    
+        & .grid-row {
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 0.05fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+    
+            & .last-column {
+                font-weight: bold;
+            }
+    
+            padding-left: 10px;
+            padding-right: 5px;
+        }
+    
+        & .ticket-info {
+            & .template {
+                display: grid;
+                grid-template-columns: 1fr 0.05fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+    
+                & a {
+                    display: inline;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    
+        & .button-remove-item {
+            height: auto;
+            width: auto;
+            font-size: 32px;
+            font-weight: 700;
+            border: none;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-size: 13px;
+        }
+    
+        & .stake-print {
+            width: auto;
+            height: 100%;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+            // display: inline-block;
+    
+            & .print-ticket {
+                float: right;
+                height: 40px;
+                width: 100%;
+                border: none;
+                margin-right: 10px;
+                background-color: #669900;
+                color: white;
+                font-size: 14px;
+            }
+        }
     }
+
 }
