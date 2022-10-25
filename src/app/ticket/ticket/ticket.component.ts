@@ -107,5 +107,9 @@ export class TicketComponent implements OnInit {
   removeTicket(){
     this.MatchOdds.splice(0);
     this.oddsNumber = 0;
+    this.totalCoeficient = 1;
+    this.totalCoeficientToPresent = '0.00';
+    this.possiblePaiment = 1;
+    this.possiblePaimentTopresent = '0.00';
   }
 }
