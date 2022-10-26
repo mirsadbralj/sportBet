@@ -1,7 +1,7 @@
 <div class="ticket-div">
     <div class="ticket">
         <div class="remove">
-            <button class="remove-ticket" (click)="removeTicket()">OBRIŠI TIKET</button>
+            <button *ngIf="oddsNumber>0" class="remove-ticket" (click)="removeTicket()">OBRIŠI TIKET</button>
         </div>
         <div class="match-pairs" *ngFor="let data of MatchOdds">
             <div class="a-competitors">
@@ -32,8 +32,12 @@
             </div>
         </div>
         <div class="stake-print">
-            <input type="number" value="1" (change)="onChange($event)">
-            <button class="print-ticket" >Ispiši tiket</button>
+            <div class="input">
+                <input type="number" min="1" value="1" (change)="onChange($event)">
+            </div>
+            <div class="button">
+                <button class="print-ticket">Ispiši tiket</button>
+            </div>
         </div>
     </div>
 </div>

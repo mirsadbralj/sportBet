@@ -1,4 +1,4 @@
-<div class="elaboration-container">
+<div class="elaboration-container" *ngIf="SelectedMatch!=undefined">
     <div class="top-div" *ngIf="SelectedMatch!=undefined">
         <div>
             <a *ngIf="SelectedMatch!=undefined">{{SelectedMatch.SelectedMatch?.sportName}}</a>
@@ -16,13 +16,13 @@
         <table *ngFor="let market of loadMarkets()">
             <li class="market-name">
                 {{market.name}}
-            <li>
+            </li>
                 <tbody>
+                    <span>
+                        {{market.competitors}}
+                    </span>
                     <tr>
-                        <td>
-                                {{market.competitors}}
-                        </td>
-                        <td *ngFor="let data of market.odds" class="odds">
+                        <td class="odds" *ngFor="let data of market.odds">
                             <button (click)="OnButtonClicked(data)" class="odd-button">
                                 <a class="left">{{data.field}}</a>
                                 <a class="right">{{data.value}}</a>

@@ -1,5 +1,5 @@
 .container {
-    width: 700px;
+    width: auto;
     height: auto;
     border: 2px solid #398534;
     border-radius: 6px;
@@ -14,14 +14,15 @@
     & .top-div {
         background-color: #398534;
         color: white;
-        padding: 5px;
-        margin-bottom: 5px;
-        // border-radius: 5px;
+        height: auto;
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 
     & ul {
         display: inline;
-
+        padding: 0px;
         & li {
             display: inline;
         }
@@ -31,19 +32,28 @@
         table-layout: initial;
         width: auto;
         border-spacing: 0;
+        width: 100%;
 
         & th.odd {
-            width: 40px;
+            min-width: 40px;
         }
 
         & td.match {
-            width: 300px;
+            min-width: 100px;
             padding-left: 10px;
         }
 
         & td.date {
-            width: 110px;
+            min-width: 110px;
         }
+
+        & td{
+            border-bottom: 1px solid #DDDDDD;
+            & button{
+                margin-left: 25%;
+            }
+        }
+
 
         & tr.match-odds-row:hover {
             background-color: #DDDD;

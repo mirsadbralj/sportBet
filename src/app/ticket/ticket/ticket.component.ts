@@ -96,7 +96,7 @@ export class TicketComponent implements OnInit {
       this.totalCoeficient = this.totalCoeficient / Number(match.Oddvalue);
       this.totalCoeficientToPresent = this.totalCoeficient.toFixed(2);
 
-      this.possiblePaiment = this.totalCoeficient; // * ULOG
+      this.possiblePaiment = this.totalCoeficient * this.stake; // * ULOG
       this.possiblePaimentTopresent = this.possiblePaiment.toFixed(2);
     }
     else{    
