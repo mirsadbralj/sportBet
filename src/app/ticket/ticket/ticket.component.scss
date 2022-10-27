@@ -1,5 +1,4 @@
 .ticket-div {
-    background-color: #41474F;
     width: auto;
     height: auto;
     border-radius: 6px;
@@ -7,6 +6,7 @@
     & .ticket {
         padding: 3px;
         margin-bottom: 3px;
+        background-color: #41474F;
         & .remove{
             display: block;
 
@@ -123,4 +123,17 @@
         }
     }
 
+}
+
+#scroller::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 4px;
+    padding-left: 2px;
+}
+#scroller::-webkit-scrollbar-thumb{
+    background: #272b31;
+    border-radius: 4px;
+}
+#scroller::-webkit-scrollbar-track{
+    background: #bbb;
 }

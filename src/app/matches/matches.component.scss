@@ -4,6 +4,7 @@
     border: 2px solid #398534;
     border-radius: 6px;
     font-size: 14px;
+
     & .table-div {
         background-color: white;
         margin-top: 15px;
@@ -54,7 +55,6 @@
             }
         }
 
-
         & tr.match-odds-row:hover {
             background-color: #DDDD;
         }
@@ -75,4 +75,17 @@
             cursor: pointer;
         }
     }
+}
+
+#scroller::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 4px;
+    padding-left: 2px;
+}
+#scroller::-webkit-scrollbar-thumb{
+    background: #272b31;
+    border-radius: 4px;
+}
+#scroller::-webkit-scrollbar-track{
+    background: #bbb;
 }

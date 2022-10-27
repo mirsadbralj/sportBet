@@ -67,3 +67,16 @@
         margin-bottom: 10px;
     }
 }
+
+#scroller::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 4px;
+    padding-left: 2px;
+}
+#scroller::-webkit-scrollbar-thumb{
+    background: #272b31;
+    border-radius: 4px;
+}
+#scroller::-webkit-scrollbar-track{
+    background: #bbb;
+}
