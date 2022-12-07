@@ -8,10 +8,16 @@
     margin-left: 1px">
     <ul class="sports" *ngFor="let sport of Sports">
         <li class="sport">
-            <a class="sport-name" (click)="onSportClicked(sport)">{{sport.name}}</a>
+            <div class="menu-selected" >
+                <a class="sport-name" (click)="onSportClicked(sport)">{{sport.name}}</a>
+                <div class="selected-arrow" [@MenuArrowAnimation]="sport.expanded"></div>
+            </div>
             <ul *ngIf="sport.id == SelectedSport?.id">
                 <li class="countries" *ngFor="let country of sport.countries">
-                    <a (click)="onCountryClicked(country)">{{country.name}}</a>
+                    <div class="country-selected" >
+                      <a (click)="onCountryClicked(country)">{{country.name}}</a>
+                      <div class="selected-arrow" [@MenuArrowAnimation]="country.expanded"></div>
+                    </div>
                     <ul *ngIf="country.name == SelectedCountry?.name">
                         <li class="leagues" *ngFor="let league of country.leagues">
                             <a class="league-name" (click)="onLeagueClicked(league)">{{league.name}}</a>

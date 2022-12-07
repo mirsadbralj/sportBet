@@ -152,7 +152,7 @@ export class DataStoreService {
     this.data.forEach((match: Match) => {
       var sport = sports.find(s => s.id == match.sportId);
       if (!sport) {
-        sport = new Sport(match.sportId, match.sportName, match.sportOrder, []);
+        sport = new Sport(match.sportId, match.sportName, match.sportOrder, [], false);
         sports.push(sport);
         this.sort(sports);
       }
