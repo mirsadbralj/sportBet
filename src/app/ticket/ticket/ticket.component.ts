@@ -4,10 +4,11 @@ import { Selected } from 'src/Models/Selected';
 import { Match } from 'src/Models/Match';
 import { Odds } from 'src/Models/Odds';
 import { MatchOdd } from 'src/Models/MatchOdd';
+
 @Component({
   selector: 'app-ticket',
   templateUrl: './ticket.component.html',
-  styleUrls: ['./ticket.component.scss']
+  styleUrls: ['./ticket.component.scss'],
 })
 export class TicketComponent implements OnInit {
   SelectedMatch?: Selected;

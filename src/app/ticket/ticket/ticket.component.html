@@ -12,7 +12,10 @@
         <div class="match-pairs" *ngFor="let data of MatchOdds">
             <div class="a-competitors">
                 <a>{{data.competitors}}</a>
-                <a class="last-column"><button class="button-remove-item" (click)="removeOdd(data)">x</button></a>
+                <div class="column-x">
+                    <img src="assets/images/rsz_x.png" class="button-remove-item" 
+                     (click)="removeOdd(data)" width="10" height="10" >
+                </div>
             </div>
             <div class="grid-row">
                 <a>{{data.sportName}}  -  {{data.countryName}}</a>

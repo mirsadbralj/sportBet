@@ -14,9 +14,9 @@
             </div>
             <ul *ngIf="sport.id == SelectedSport?.id">
                 <li class="countries" *ngFor="let country of sport.countries">
-                    <div class="country-selected" >
+                    <div class="menu-selected" >
                       <a (click)="onCountryClicked(country)">{{country.name}}</a>
-                      <div class="selected-arrow" [@MenuArrowAnimation]="country.expanded"></div>
+                      <div class="selected-arrow black" [@MenuArrowAnimation]="country.expanded"></div>
                     </div>
                     <ul *ngIf="country.name == SelectedCountry?.name">
                         <li class="leagues" *ngFor="let league of country.leagues">

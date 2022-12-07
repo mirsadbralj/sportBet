@@ -7,6 +7,7 @@
         padding: 3px;
         margin-bottom: 3px;
         background-color: #41474F;
+     
         & .remove{
             display: block;
 
@@ -37,6 +38,27 @@
             padding-left: 10px;
             padding: 6px 3px 6px 10px;
             font-size: 14px;
+
+            & .column-x{
+                height: 20px;
+                width: 20px;
+                display: flex;
+                background-color: red;
+
+                & .button-remove-item {
+                    height: auto;
+                    width: auto;
+                    margin: 3px;
+                    transform: rotate(90deg) translate(0, 0);
+                    transition: all 0.3s ease-out;
+                }  
+
+                & .button-remove-item:hover {
+                    // position: absolute;
+                    transform: rotate(-5deg) translate(0, 0);
+                    transition: all 0.3s ease-out;
+                }
+            }
         }
     
         & .grid-row {
@@ -75,18 +97,7 @@
             }
         }
     
-        & .button-remove-item {
-            height: auto;
-            width: auto;
-            font-size: 32px;
-            font-weight: 700;
-            border: none;
-            border-radius: 3px;
-            background-color: red;
-            color: white;
-            text-align: center;
-            font-size: 13px;
-        }
+ 
     
         & .stake-print {
             width: auto;

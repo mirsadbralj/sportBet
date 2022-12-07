@@ -54,6 +54,7 @@ export class MenuComponent implements OnInit {
   onSportClicked(sport: Sport) {
     sport.expanded = !sport.expanded;
     this.clickedSport = sport;
+    console.log(this.Sports);
     this.Sports.forEach(s=> {
       if(s.id == sport.id){
         s.expanded = sport.expanded;
