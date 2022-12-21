@@ -2,7 +2,6 @@
     width: auto;
     height: auto;
     border-radius: 6px;
-
     & .ticket {
         padding: 3px;
         margin-bottom: 3px;
@@ -36,12 +35,12 @@
             grid-row-gap: 0px;
             align-items: center;
             padding-left: 10px;
-            padding: 6px 3px 6px 10px;
+            padding: 3px 3px 3px 10px;
             font-size: 14px;
 
             & .column-x{
-                height: 20px;
-                width: 20px;
+                height: 17px;
+                width: 17px;
                 display: flex;
                 background-color: red;
 
@@ -54,7 +53,6 @@
                 }  
 
                 & .button-remove-item:hover {
-                    // position: absolute;
                     transform: rotate(-5deg) translate(0, 0);
                     transition: all 0.3s ease-out;
                 }
@@ -78,6 +76,7 @@
         }
     
         & .ticket-info {
+
             & .template {
                 display: grid;
                 grid-template-columns: 1fr 0.05fr;
@@ -96,8 +95,6 @@
                 }
             }
         }
-    
- 
     
         & .stake-print {
             width: auto;
@@ -128,12 +125,19 @@
                     background-color: #669900;
                     color: white;
                     font-size: 14px;
+                    cursor: pointer;
+                }
+
+                & .print-ticket:disabled{
+                    background-color: #669900;
+                    opacity: 0.7;
+                    color: white;
+                    font-size: 14px;
+                    cursor: pointer;
                 }
             }
-
         }
     }
-
 }
 
 #scroller::-webkit-scrollbar{
@@ -141,10 +145,80 @@
     border-radius: 4px;
     padding-left: 2px;
 }
+
 #scroller::-webkit-scrollbar-thumb{
     background: #272b31;
     border-radius: 4px;
 }
+
 #scroller::-webkit-scrollbar-track{
     background: #bbb;
+}
+
+h2{
+    margin-top: 25px;
+    background-color: #272A31;
+    color: white;
+    text-align: center;
+}
+
+.match-info{    
+    & a{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    
+    & a.odd-field{
+        font-weight: bold;
+    }
+    
+    & .match{
+        margin-bottom: 10px;
+        margin-right: 5%;
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: 1fr 0.1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        & .odd-field{
+            text-align: end;
+            padding-right: 10px;
+        }
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }    
+}
+.button-container{
+    display: inline-flex;
+    height: 36px;
+    width: 100%;
+    justify-content: space-evenly;
+
+    & .button.yes{
+        width: 100px;
+        background-color: #669900;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        font-size: 14px;
+    }
+    
+    & .button.no{
+        width: 100px;
+        background-color: #B60404;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        font-size: 14px;
+    }
+}
+.possible-payment{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    & a{
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: bold;    
+    }
 }

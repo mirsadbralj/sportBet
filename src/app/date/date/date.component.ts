@@ -6,6 +6,7 @@ import { DateTime } from 'src/Models/Date';
 import { MatchFilter } from 'src/Models/MatchFilter';
 import { Sport } from 'src/Models/Sport';
 import { Nullable } from 'src/Models/Nullable';
+import { ConfirmedTicketsStoreService } from 'src/Services/confirmed-tickets-store-service.service';
 
 @Component({
   selector: 'app-date',
@@ -17,11 +18,13 @@ export class DateComponent implements OnInit {
   Dates = new Array<DateTime>();
   Sports = new Array<Sport>();
   Matches = new Array<Match>();
+  showModal = false;
   public SelectedDate?:DateTime;
 
   constructor(
     private MatchesFilterService: MatchesFilterService,
-    private DataStoreService: DataStoreService
+    private DataStoreService: DataStoreService,
+    public confirmationService: ConfirmedTicketsStoreService
   ) { }
 
   ngOnInit(): void {
@@ -33,7 +36,9 @@ export class DateComponent implements OnInit {
       this.Sports = sports;
     });
   }
-
+  onModalClose(event:any){
+    this.showModal = false;
+  }
   OnDateButtonClicked(date:DateTime){
     
     this.SelectedDate=date;

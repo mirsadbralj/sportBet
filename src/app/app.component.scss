@@ -1,12 +1,12 @@
 .container {
   & body {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Times New Roman', Times, serif;
 
     & .main-class {
       display: flex;
       width: auto;
-      
+      column-gap: 3px;
       & .menu {
         margin-top: 5px;
       }
@@ -14,11 +14,10 @@
       & .container-ticket-play {
         display: grid;
         margin-top: 5px;
-        margin-left: 10px;
         width: 100%;
-        grid-template-columns: 1.2fr 0.8fr 0.5fr;
+        grid-template-columns: 0.8fr 0.5fr 0.4fr;
         grid-template-rows: 1fr;
-        grid-column-gap: 5px;
+        grid-column-gap: 3px;
         grid-row-gap: 0px;
       }
 

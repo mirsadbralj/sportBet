@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 import { MenuArrowAnimation } from './menu/menu.animation';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalComponent } from './modal/modal/modal.component';
+import { ConfirmedTicketsComponent } from './confirmed-tickets/confirmed-tickets.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatchesComponent,
     DateComponent,
     ElaborationComponent,
-    TicketComponent
+    TicketComponent,
+    ModalComponent,
+    ConfirmedTicketsComponent
   ],
   imports: [
     BrowserModule,

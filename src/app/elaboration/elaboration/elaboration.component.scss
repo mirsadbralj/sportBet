@@ -1,6 +1,6 @@
 .elaboration-container {
     width: auto;
-    font-size: 14px;
+    font-size: 13px;
     border: 2px solid #398534;
     border-radius: 5px;
 
@@ -28,9 +28,7 @@
 
                 & .odds {
                     display: -webkit-inline-flex;
-
                     & .odd-button {
-                        position: inherit;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         grid-template-rows: 1fr;

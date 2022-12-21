@@ -1,0 +1,86 @@
+h2{
+    margin-top: 25px;
+    background-color: #398534;
+    color: white;
+    text-align: center;
+}
+
+.tickets{
+    font-size: 16px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+        & .ticket{
+            display: flex;
+            position: relative;
+            align-content: center;
+            width: auto;
+            height: 30px;
+            user-select: none;
+            box-sizing: border-box;
+            background-color: #41474F;
+            color: white;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            align-items: center;
+            justify-content: space-evenly;
+
+            & .selected-arrow {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-width: 2px 0 0 2px;
+                border-style: solid;
+                border-color: initial;
+                right: 10px;
+                transform: rotate(-45deg) translate(0, -50%);
+                transform-origin: top;
+                top: 50%;
+                transition: all 0.3s ease-out;
+                color: white;
+            }
+        }
+
+        & ul.wrapper{
+            background-color: white;
+            margin: none;
+        }
+        
+    & a.second-field{
+        margin-left: 5px;
+        font-weight: bold;
+    }
+
+    & .matches-container{
+        font-size: 14px;
+        padding: 0px 5px 10px 5px;
+    }
+
+    & .match-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        & .second-field{
+            text-align: end;
+        }
+    }
+
+    & .ticket-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        & .second-field{
+            text-align: end;
+        }
+        & .first-field{
+            font-weight: bold;
+        }
+    }
+}

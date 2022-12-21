@@ -1,0 +1,29 @@
+<h2>ODIGRANI TIKETI</h2>
+<div class="tickets">
+    <ul *ngFor="let ticket of tickets" class="wrapper">
+        <li>
+            <div class="ticket" (click)="onTicketClicked(ticket)">
+                <a>Tiket broj {{ticket.ticketId}}</a>
+                <div class="selected-arrow" [@MenuArrowAnimation]="ticket.expanded"></div>
+            </div>
+            <ul *ngIf="selectedTicket?.ticketId==ticket.ticketId" class="matches-container">
+                <li *ngFor="let matches of ticket.matchOdds" class="match-container">
+                    <a>{{matches.competitors}}</a>
+                    <a class="second-field">{{matches.Oddfield}}({{matches.oddDescription}})</a>
+                </li>
+                <div class="ticket-info">
+                    <a class="first-field">Broj parova</a>
+                    <a class="second-field">{{ticket.numberOfMatches}}</a>
+                </div>
+                <div class="ticket-info">
+                    <a class="first-field">Koeficijent</a>
+                    <a class="second-field">{{ticket.coefficient}}</a>
+                </div>
+                <div class="ticket-info">
+                    <a class="first-field">Moguća isplata</a>
+                    <a class="second-field">{{ticket.possiblePayment}}</a>
+                </div>
+            </ul>
+        </li>    
+    </ul>
+</div>

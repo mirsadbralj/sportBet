@@ -22,9 +22,6 @@ export class MenuComponent implements OnInit {
   public SelectedCountry?: Country;
   public SelectedLeague?: League;
   isMenuOpen: boolean = false;
-
-  isExpanded:boolean = false;
-
   clickedSport!: Sport;
   clickedCountry!: Country;
   constructor(
@@ -35,7 +32,6 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.DataStoreService.getSports().subscribe((sports) => {
       this.Sports = sports;
-
       this.Sports.forEach(s=>{
         if(this.clickedSport && s.id == this.clickedSport.id){
           s.expanded = this.clickedSport.expanded;
@@ -54,7 +50,6 @@ export class MenuComponent implements OnInit {
   onSportClicked(sport: Sport) {
     sport.expanded = !sport.expanded;
     this.clickedSport = sport;
-    console.log(this.Sports);
     this.Sports.forEach(s=> {
       if(s.id == sport.id){
         s.expanded = sport.expanded;

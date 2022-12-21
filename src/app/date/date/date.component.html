@@ -1,9 +1,24 @@
 <div class="main-class">
-    <div class="date">
-        <ul *ngFor="let dataitem of Dates">
-            <li>
-                <button type="button" (click)="OnDateButtonClicked(dataitem)">{{dataitem.date | date:'EEEE,dd.MM.'}}</button>
-            </li>
-        </ul>
-    </div>    
+    <div class="header-container">
+        <div class="date">
+            <ul *ngFor="let dataitem of Dates">
+                <li>
+                    <button type="button" (click)="OnDateButtonClicked(dataitem)">{{dataitem.date | date:'EEEE,dd.MM.'}}</button>
+                </li>
+            </ul>
+        </div>
+        <div class="splitter"></div>
+        <div class="confirmed-tickets">
+            <button type="button" (click)="showModal = true">Moji tiketi ({{confirmationService.confirmedTickets.length}})</button>
+        </div>
+    </div>
 </div>
+
+<app-modal 
+    *ngIf="showModal"
+    [width]="'600px'"
+    [height]="'300px'"
+    (onModalClose)="onModalClose($event)"
+    >
+    <app-confirmed-tickets></app-confirmed-tickets>
+</app-modal>
